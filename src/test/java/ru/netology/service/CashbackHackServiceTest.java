@@ -1,10 +1,10 @@
 package ru.netology.service;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
 
-    @org.testng.annotations.Test
+    @org.junit.Test
 
     public void whenAmountBoundary (){
         CashbackHackService service = new CashbackHackService();
@@ -13,10 +13,10 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
-    @org.testng.annotations.Test
+    @org.junit.Test
 
     public void whenAmountLessBoundary (){
         CashbackHackService service = new CashbackHackService();
@@ -25,9 +25,9 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 190;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void whenAmountMoreBoundary (){
         CashbackHackService service = new CashbackHackService();
         int amount = 1111;
@@ -35,9 +35,9 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void whenNoAmount (){
         CashbackHackService service = new CashbackHackService();
         int amount = 0;
@@ -45,9 +45,9 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1000;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void minBorderAmount (){
         CashbackHackService service = new CashbackHackService();
         int amount = 999;
@@ -55,9 +55,9 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
-    @org.testng.annotations.Test
+    @org.junit.Test
     public void maxBorderAmount (){
         CashbackHackService service = new CashbackHackService();
         int amount = 1001;
@@ -65,7 +65,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
 
