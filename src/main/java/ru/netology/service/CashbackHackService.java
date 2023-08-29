@@ -1,10 +1,9 @@
 package ru.netology.service;
 
 public class CashbackHackService {
-    rivate final int boundary = 1000;
+    private final int boundary = 1000;
 
     public int remain(int amount) {
         return boundary - amount % boundary;
     }
 }
-
